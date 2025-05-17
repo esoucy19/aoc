@@ -1,8 +1,7 @@
+import sys
 from collections import Counter
 from copy import copy
 from itertools import chain
-import sys
-
 
 if __name__ == "__main__":
     with open(sys.argv[1]) as f:
