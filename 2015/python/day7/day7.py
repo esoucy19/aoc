@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 import asyncio
-
-from collections.abc import Awaitable, Callable
 from collections import deque
+from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 
 simple_circuit = """123 -> x
@@ -160,11 +159,10 @@ async def main():
             for input in conn.inputs:
                 match input:
                     case str(s):
-                        if s not in wires.keys():
+                        if s not in wires:
                             inputs_in_wires = False
                             break
-                        else:
-                            gate_inputs.append(wires[s])
+                        gate_inputs.append(wires[s])
                     case int(i):
                         gate_inputs.append(i)
             if not inputs_in_wires:

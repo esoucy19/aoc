@@ -6,5 +6,5 @@ def test_hohoho() -> None:
     input_string = "HOH"
 
     expected = frozenset(("HOOH", "HOHO", "OHOH", "HOOH", "HHHH"))
-    received = frozenset(day19.make_new_molecules
+    received = frozenset(day19.make_new_molecules(input_string, replacements))
     assert received == expected

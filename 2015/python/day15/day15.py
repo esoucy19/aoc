@@ -1,11 +1,10 @@
 from __future__ import annotations
 
+import itertools
 
 # import functools
 # import operator
 from collections import Counter
-from collections.abc import Mapping
-import itertools
 from functools import reduce
 
 

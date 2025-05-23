@@ -1,6 +1,5 @@
 from typing import NamedTuple, NewType
 
-
 Secs = NewType("Secs", int)
 Kms = NewType("Kms", int)
 Km = NewType("Km", int)

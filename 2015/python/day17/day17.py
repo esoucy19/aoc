@@ -1,6 +1,6 @@
 import sys
-from more_itertools import powerset
 
+from more_itertools import powerset
 
 if __name__ == "__main__":
     with open(sys.argv[1]) as f:

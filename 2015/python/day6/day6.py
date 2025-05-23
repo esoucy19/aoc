@@ -1,5 +1,6 @@
+from collections.abc import Iterable
 from enum import StrEnum
-from typing import Iterable, NamedTuple
+from typing import NamedTuple
 
 
 class Action(StrEnum):

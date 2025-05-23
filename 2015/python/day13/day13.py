@@ -1,7 +1,5 @@
 import itertools
 from collections.abc import Sequence
-from typing import NamedTuple, TypedDict
-
 
 type Preferences = dict[str, dict[str, int]]
 

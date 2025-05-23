@@ -1,7 +1,5 @@
-import codecs
 import functools
 import string
-
 from dataclasses import dataclass
 
 example = r'''"""abc""aaa\"aaa""\x27"'''
@@ -67,14 +65,13 @@ class Scanner:
                                 raise RuntimeError(
                                     "reached end of line while parsing token"
                                 )
+                            is_hex = all(h in string.hexdigits for h in hex)
+                            if is_hex:
+                                self.tok = chr(int(f"0x{hex}", 16))
                             else:
-                                is_hex = all(h in string.hexdigits for h in hex)
-                                if is_hex:
-                                    self.tok = chr(int(f"0x{hex}", 16))
-                                else:
-                                    raise ValueError(
-                                        "unrecognized escape sequence `\\x" + hex + "`"
-                                    )
+                                raise ValueError(
+                                    "unrecognized escape sequence `\\x" + hex + "`"
+                                )
                         case None:
                             raise RuntimeError(
                                 "reached end of line while parsing token"

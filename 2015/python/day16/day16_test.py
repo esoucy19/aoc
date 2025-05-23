@@ -2,7 +2,6 @@ from collections.abc import Iterable
 from itertools import batched
 from typing import NamedTuple
 
-
 type Thing = int | None
 
 

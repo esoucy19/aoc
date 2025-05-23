@@ -71,4 +71,3 @@ if __name__ == "__main__":
             if is_nice_string2(line):
                 nice_strings += 1
     print(nice_strings)
-

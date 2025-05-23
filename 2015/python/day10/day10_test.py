@@ -1,8 +1,8 @@
 from day10.day10 import (
+    _concat_counts,
+    _count_groups,
     _parse,
     _split_groups,
-    _count_groups,
-    _concat_counts,
     look_and_say,
 )
 

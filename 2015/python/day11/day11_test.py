@@ -2,11 +2,11 @@ from day11 import day11
 
 
 def test_increment():
-    assert "b" == day11.increment("a")
-    assert "a" == day11.increment("z")[-1]
-    assert "ab" == day11.increment("aa")
-    assert "ba" == day11.increment("az")
-    assert "baa" == day11.increment("azz")
+    assert day11.increment("a") == "b"
+    assert day11.increment("z")[-1] == "a"
+    assert day11.increment("aa") == "ab"
+    assert day11.increment("az") == "ba"
+    assert day11.increment("azz") == "baa"
 
 
 def test_rule1():
@@ -47,5 +47,5 @@ def test_is_valid_password():
 
 
 def test_get_new_password():
-    assert "abcdffaa" == day11.get_new_password("abcdefgh")
-    assert "ghjaabcc" == day11.get_new_password("ghijklmn")
+    assert day11.get_new_password("abcdefgh") == "abcdffaa"
+    assert day11.get_new_password("ghijklmn") == "ghjaabcc"
