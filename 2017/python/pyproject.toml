@@ -1,0 +1,17 @@
+[project]
+name = "aoc-2017"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Etienne Soucy", email = "esoucy@myself.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+aoc-2017 = "aoc_2017:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
